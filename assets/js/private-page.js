@@ -64,7 +64,7 @@ $(document).ready(function() {
 
   // SUBCATEGORY creation:
   var new_id = 0;
-  var new_nesting_lvl;
+  var new_nesting_lvl = 0;
   var new_index = -1;
   $(document).on('click', '.new', function() {
     new_id = $(this).data('id');
@@ -102,6 +102,7 @@ $(document).ready(function() {
         $('#category-modal').css('display', 'none');
         new_id = 0;
         new_index = -1;
+        new_nesting_level = 0;
       }
     });
   });
