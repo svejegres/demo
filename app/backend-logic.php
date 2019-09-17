@@ -21,6 +21,7 @@ if (isset($_POST['signup'])) {
      */
     $sql = "INSERT INTO users (username, password) VALUES ('{$username}', '{$passwordHashed}')";
     if (mysqli_query($conn, $sql)) {
+      $_SESSION['Username'] = $username;
       header('location: private-page.php');
     } else {
       echo "Error: ". mysqli_error($conn);
