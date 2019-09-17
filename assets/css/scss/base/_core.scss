@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  outline: none;
+}
+
+header {
+  background-image: url("/assets/images/bg-image.jpg");
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+
+  @include mobile-only {
+    height: auto;
+    padding-bottom: 20px;
+  }
+}
+
+label {
+  @include mobile-only {
+    left: 30px !important;
+  }
+}
+
+nav {
+  align-items: center;
+  background: $c-light-grey;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
